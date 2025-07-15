@@ -1,0 +1,15 @@
+body {
+    color: purple;
+}
+
+section{
+    color: rgb(43, 120, 120);
+}
+
+form{
+    color: goldenrod;
+}
+
+button, input{
+    color:inherit;
+}

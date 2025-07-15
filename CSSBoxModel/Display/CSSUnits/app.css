@@ -1,0 +1,36 @@
+section{
+    background-color: #fb8500;
+    width: 800px;
+    height: 800px;
+}
+
+div {
+    background-color: #ffb703;
+    width: 50%;
+    height: 50%;
+}
+
+h1{
+    font-size: 40px;
+    border: 1px solid darkblue;
+    line-height: 400%;
+}
+
+article{
+    font-size: 20px;
+}
+h2{
+    font-size: 2em;
+}
+
+ul{
+    font-size: 1.5em;
+}
+
+#rems h2{
+    font-size: 3rem;
+}
+
+#rems ul{
+    font-size: 0.8rem;
+}

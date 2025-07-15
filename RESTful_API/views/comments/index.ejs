@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comments Home</title>
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Comments</h1>
+        <ul class="list-group">
+            <% for (let c of comments){ %>
+                <li class="list-group-item">
+                    <%= c.comment %> - <b>
+                            <%= c.username %>
+                        </b>
+                        <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/comments/<%= c.id %>">ⓘ</a>
+                        <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/comments/<%= c.id %>/edit">✎</a>
+                </li>
+                <% } %>
+
+        </ul>
+            <a class="link-body-emphasis link-offset-2 link-underline-opacity-25 link-underline-opacity-75-hover" href="/comments/new">New Comment</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+h2 {
+    color: #05cffa;
+    background-color: rgb(255,200,200);
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-weight: 400;
+    text-decoration: blue underline wavy;
+    letter-spacing: 7px;
+    font-size: 60px;
+    font-family: monospace;
+}
+
+button {
+    color: magenta;
+    background-color: cyan;
+}
+
+p {
+    color: olive;
+    background: gold;
+    text-align: right;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}

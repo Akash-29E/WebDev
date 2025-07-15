@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Edit Comment</title>
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <div class="container">
+        <form method="post" action="/comments/<%= comment.id %>?_method=PATCH">
+            <div class="mb-3 col-4">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3 col-4">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"><%= comment.comment %></textarea>
+                </textarea>
+                
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+        <a href="/comments">Back to Comments Home</a>
+    </div>
+</body>
+
+</html>

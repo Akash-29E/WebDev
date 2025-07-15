@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show</title>
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <div class="container">
+        <h4 class="display-6">Comment ID: <%= comment.id %>
+        </h4>
+        <h1 class="display-1">
+            <%= comment.comment %>
+        </h1>
+        <h3 class="display-3"> - <%= comment.username %>
+        <a class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="/comments/<%= comment.id %>/edit">✎</a></h3>
+        
+        <form method="POST" action="/comments/<%=comment.id %>?_method=DELETE">
+            <button class="btn btn-danger">Delete</button>
+        </form>
+        <a href="/comments">Back to Comments Home</a><br>
+
+    </div>
+</body>
+
+</html>

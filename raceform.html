@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Registration Form</title>
+</head>
+
+<body>
+    <h1>Race Registration</h1>
+    <h3>Please fill in your information.</h3>
+    <form action="/race">
+        <div>
+            <label for="firstname">Firstname:</label>
+            <input type="text" name="firstname" id="firstname">
+            <label for="lastname">Lastname:</label>
+            <input type="text" name="lastname" id="lastname">
+        </div>
+
+        <p>Select a race:</p>
+        <div>
+            <input type="radio" name="racetype" id="funrun" value="funrun">
+            <label for="funrun">Fun run 5k</label>
+        </div>
+        <div>
+            <input type="radio" name="racetype" id="half" value="half">
+            <label for="half">Half Marathon</label>
+        </div>
+        <div>
+            <input type="radio" name="racetype" id="full" value="full">
+            <label for="full">Full Marathon</label>
+        </div>
+        <div>
+            <label for="email">Email ID:</label>
+            <input type="email" name="email" id="email">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="agegroup">Select Age Group:</label>
+            <select name="agegroup" id="agegroup">
+                <option value="kids">Under 18</option>
+                <option value="midage">18-30</option>
+                <option value="lateadults">30-50</option>
+                <option value="seniors">50+</option>
+            </select>
+        </div>
+        <button type="submit">Register!</button>
+    </form>
+    file:///D:/race?firstname=Ash&lastname=Muchmuch&racetype=full&email=tash%40gg.sa&password=PASS%40%40EQEASD&agegroup=18-30
+</body>
+
+</html>
