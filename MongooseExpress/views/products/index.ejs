@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products</title>
+    <%- include('partials/head') %>
+</head>
+<body>
+    <div class="container">
+        <h1 class="h1 fw-semibold fs-2 font-monospace">All Products!</h1>
+        <ul>
+            <% for (let p of products){ %>
+            <li class="li">
+                <a href="/products/<%= p.id %>" class="text-decoration-none"><%= p.name %></a>
+            </li>
+            <% } %>
+        </ul>
+        <br>
+        <a href="/products/new" class="text-decoration-none">Add New Item</a>
+    </div>
+</body>
+</html>

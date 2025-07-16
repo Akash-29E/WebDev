@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New Product</title>
+    <%- include('partials/head') %>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1 fw-semibold fs-2 font-monospace">Add a product</h1>
+        <form action="/products" method="POST" class="row g-3">
+            <div class="col-md-6">
+                <label for="prodName" class="form-label">Product Name:</label>
+                <input class="form-control" id="prodName" name="name">
+            </div>
+            <div class="col-md-6">
+                <label for="prodPrice" class="form-label">Price(Unit):</label>
+                <div class="input-group">
+                    <div class="input-group-text">$</div>
+                    <input class="form-control" id="prodPrice" name="price">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="inputCate" class="form-label">Category</label>
+                <select id="inputCate" class="form-select" name="category">
+                    <option selected>vegetable</option>
+                    <option>fruit</option>
+                    <option>dairy</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Add Product</button>
+            </div>
+        </form>
+        <br>
+        <a href="/products" class="text-decoration-none">Back to All Products</a>
+    </div>
+
+</body>
+
+</html>
