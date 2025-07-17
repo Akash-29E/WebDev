@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Products</title>
     <%- include('partials/head') %>
 </head>
+
 <body>
     <div class="container">
-        <h1 class="h1 fw-semibold fs-2 font-monospace">All Products!</h1>
+        <!-- <h1 class="h1 fw-semibold fs-2 font-monospace">All Products!</h1> -->
+        
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Select Category
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item <%=Cat==='All'?'active':''%>" href="/products">All</a></li>
+                <% for (let c of cats){ %>
+                    <li><a class="dropdown-item text-capitalize <%=c===Cat?'active':''%>" href="/products?category=<%=c%>">
+                            <%=c%>
+                        </a></li>
+                    <% } %>
+            </ul>
+        </div>
         <ul>
             <% for (let p of products){ %>
-            <li class="li">
-                <a href="/products/<%= p.id %>" class="text-decoration-none"><%= p.name %></a>
-            </li>
-            <% } %>
+                <% if (Cat==='All' ){ %>
+                    <li class="li">
+                        <a href="/products/<%= p.id %>" class="text-decoration-none">
+                            <%= p.name %>
+                        </a>
+                    </li>
+                    <% } else if (p.category===Cat) {%>
+                        <li class="li">
+                            <a href="/products/<%= p.id %>" class="text-decoration-none">
+                                <%=p.name%>
+                            </a>
+                        </li>
+                        <% }} %>
         </ul>
         <br>
-        <a href="/products/new" class="text-decoration-none">Add New Item</a>
+        <button class="btn btn-primary"><a href="/products/new?category=<%=Cat%>" class="text-decoration-none text-reset">Add New Item</a></button>
     </div>
 </body>
+
 </html>

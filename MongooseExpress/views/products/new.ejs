@@ -23,18 +23,18 @@
             </div>
             <div class="col-md-4">
                 <label for="inputCate" class="form-label">Category</label>
-                <select id="inputCate" class="form-select" name="category">
-                    <option selected>vegetable</option>
-                    <option>fruit</option>
-                    <option>dairy</option>
+                <select id="inputCate" class="form-select text-capitalize" name="category">
+                    <% for (let c of cats){ %>
+                      <option class="text-capitalize" <%=c===Cat?'selected':''%>><%= c %></option>
+                    <% } %>
                 </select>
             </div>
             <div class="col-12">
                 <button type="submit" class="btn btn-primary">Add Product</button>
             </div>
-        </form>
-        <br>
-        <a href="/products" class="text-decoration-none">Back to All Products</a>
+        </form>   
+        <br>     
+        <form action="/products"><button class="btn btn-danger">Cancel</button></form>
     </div>
 
 </body>

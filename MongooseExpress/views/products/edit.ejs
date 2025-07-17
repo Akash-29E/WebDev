@@ -21,10 +21,10 @@
             </div>
             <div class="col-md-4">
                 <label for="inputCate" class="form-label">Category</label>
-                <select id="inputCate" class="form-select" name="category">
-                    <option <%= product.category==='vegetable'?'selected':'' %>>vegetable</option>
-                    <option <%= product.category==='fruit'?'selected':'' %>>fruit</option>
-                    <option <%= product.category==='dairy'?'selected':'' %>>dairy</option>
+                <select id="inputCate" class="form-select text-capitalize" name="category">
+                    <% for (let c of cats){ %>
+                      <option class="text-capitalize" <%= product.category===c?'selected':'' %>><%= c %></option> 
+                    <% } %>
                 </select>
             </div>
             <div class="col-12">
@@ -32,7 +32,10 @@
             </div>
         </form>
         <br>
-        <a href="/products" class="text-decoration-none">Back to All Products</a>
+        <button class="btn btn-danger">
+            <a href="/products/<%= product._id %>" class="text-decoration-none text-reset">Cancel</a>
+        </button>
+        
     </div>
 </body>
 </html>
